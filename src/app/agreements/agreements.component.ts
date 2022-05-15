@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ColDef, GridApi, Color, GridReadyEvent, IColumnToolPanel, SideBarDef,ICellRenderer,ICellRendererParams} from 'ag-grid-community';
 import 'ag-grid-enterprise';
-var count=0;
 
 
 class DeltaIndicator implements ICellRenderer {
@@ -11,21 +10,23 @@ class DeltaIndicator implements ICellRenderer {
     const element = document.createElement('span');
     const imageElement = document.createElement('img');
     const imageElemennewt = document.createElement('p');
+    var count=0;
+
 
     if (params.value === 'Invalid') {
-      count++;
+      count=Math.floor(Math.random() * 3) + 1;
       imageElemennewt.innerHTML =
       'Invalid <span style="color:#fff0f5;"><span style="background-color:#d9524e;;padding:4px;">'+count+'</span></span>';
       this.eGui = imageElemennewt;
     }  else if (params.value === 'Published') {
       imageElement.src =
-        '/assets/img/tick.png';
+        'assets/img/tick.png';
         element.appendChild(document.createTextNode(params.value + " "));
         element.appendChild(imageElement);
         this.eGui = element;
     } else {
       imageElement.src =
-        '/assets/img/peding.png';
+        'assets/img/peding.png';
         element.appendChild(document.createTextNode(params.value + " "));
         element.appendChild(imageElement);
         this.eGui = element;
@@ -174,7 +175,7 @@ export class AgreementsComponent {
     this.gridApi = params.api;
 
     this.http
-      .get('/assets/data/data.json')
+      .get('assets/data/data.json')
       .subscribe((data) => params.api.setRowData(data));
   }
 }
