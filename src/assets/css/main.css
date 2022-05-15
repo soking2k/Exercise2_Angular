@@ -1,0 +1,136 @@
+header .navbar .navbar-brand>img {
+  height: 48px;
+
+  @media (min-width: $breakpoint-xxl) {
+    height: 74px;
+  }
+}
+
+#container_margin {
+  margin-top: 120px;
+}
+
+#accountname,
+#dot,
+#help,
+#setting {
+  color: white;
+}
+
+b {
+  color: white;
+  margin-top: 60px;
+}
+
+
+.box_item {
+  width: 370px;
+  height: 370px;
+  background-color: rgb(12, 187, 128);
+  border-style: groove;
+  border-width: 2px;
+  border-color: rgb(209, 209, 209);
+  word-break: break-all;
+  margin: 2px;
+
+}
+
+#Create {
+  background-color: #1969a6;
+}
+
+#Add {
+  background-color: #34e0e0;
+}
+
+#Sales {
+  background-color: #c83233;
+}
+
+#Financial {
+  background-color: #1a8243;
+}
+
+#Unpaid {
+  background-color: #b8a614;
+}
+
+#Yeat {
+  background-color: #949945;
+}
+
+#Get {
+  background-color: #aa2a2b;
+}
+
+#Switch {
+  background-color: #76de31;
+}
+
+
+.box_item:hover {
+  width: 370px;
+  height: 370px;
+  background-color: rgb(12, 187, 128);
+  border-style: groove;
+  border-width: 2px;
+  border-color: rgb(77, 9, 86);
+  word-break: break-all;
+  margin: 2px;
+}
+
+.paragraph {
+  padding: 0 30px 0px 50px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+}
+
+
+.img_box {
+  margin: 40px 10px 30px 40px;
+
+}
+
+.navbarHeader {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.bg-green {
+  background-color: rgb(68, 199, 103) !important;
+}
+
+a.bg-green:hover,
+a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: #1d2124 !important;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+
+  body .container .row {
+    justify-content: center;
+  }
+
+  #help,
+  #setting {
+    color: white;
+  }
+
+  #accountname,
+  #dot,
+  #avatar {
+    display: none;
+  }
+}

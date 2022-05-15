@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agreements</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Custom styles for this template -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="body">
+    <header>
+      <!-- nav -->
+      <div class="navbar navbar-expand-xl fixed-top navbar-light bg-blue shadow-sm">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="/assets/img/logo_tps.svg" alt="TPS's Logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" id="Home" href="home">
+                <img src="/assets/img/house-bar.png" alt="Bootstrap" width="24" height="24">
+                Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="Agreements" href="agreements">
+                <img src="/assets/img/supermarket-bar.png" alt="Bootstrap" width="24" height="24">
+                Agreements</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto1">
+            <li class="nav-item1">
+              <a class="nav-link" id="goodafternoon" href="#" >
+                <b>Pandult</b> <p>Good Afternoon, User</p></a>
+              </li>
+          </ul>
+          <img src="/assets/img/setting.png" alt="Bootstrap" width="18" height="18">
+        </div>
+      </div>
+    </header>
+      <div class="blankcategory" >
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="Mod_breadcrum" href="home" >Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Agreements</li>
+          </ol>
+        </nav>
+      </div>
+    <!--Body-->
+    <div class="container_home">
+
+      <div class="paragraph">
+        <h2 id="tittle_para">Agreements</h2>
+        <p class="para_para">We provide a unified platform for Agreements recociliation, communication.</p>
+      </div>
+      <ag-grid-angular
+      style="width: 100%; height: 100vh; margin-left:30px;"
+      class="ag-theme-alpine"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [pagination]="true"
+      [sideBar]="sideBar"
+      [paginationPageSize]= 25
+      [columnTypes]="columnTypes"
+      (gridReady)="onGridReady($event)"
+      ></ag-grid-angular>
+
+      </div>
+
+<!--LOAD JS AG GRID-->
+  <script>var __basePath = './';</script>
+  <script src="./node_modules/ag-grid-enterprise/dist/ag-grid-enterprise.min.js">
+	</script>
+  </div>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+		<script src="https://unpkg.com/core-js-bundle@3.6.5/minified.js">
+		</script>
+		<script src="https://unpkg.com/zone.js@0.11.2/dist/zone.min.js">
+		</script>
+		<script>
+            var appLocation = './';
+            var boilerplatePath = '';
+            var systemJsMap = {
+                "@ag-grid-community/angular": "https://unpkg.com/@ag-grid-community/angular@27.2.1/",
+                "@ag-grid-community/core/dist/styles": "https://unpkg.com/@ag-grid-community/core@27.2.1/dist/styles",
+                "ag-grid-angular": "https://unpkg.com/ag-grid-angular@27.2.1/",
+                "ag-grid-community": "https://unpkg.com/ag-grid-community@27.2.1/",
+                "ag-grid-enterprise": "https://unpkg.com/ag-grid-enterprise@27.2.1/"
+            };
+            var systemJsPaths = {
+                "@ag-grid-community/client-side-row-model": "https://unpkg.com/@ag-grid-community/client-side-row-model@27.2.1/dist/client-side-row-model.cjs.min.js",
+                "@ag-grid-community/core": "https://unpkg.com/@ag-grid-community/core@27.2.1/dist/core.cjs.min.js",
+                "@ag-grid-community/csv-export": "https://unpkg.com/@ag-grid-community/csv-export@27.2.1/dist/csv-export.cjs.min.js",
+                "@ag-grid-community/infinite-row-model": "https://unpkg.com/@ag-grid-community/infinite-row-model@27.2.1/dist/infinite-row-model.cjs.min.js",
+                "@ag-grid-enterprise/charts": "https://unpkg.com/@ag-grid-enterprise/charts@27.2.1/dist/charts.cjs.min.js",
+                "@ag-grid-enterprise/clipboard": "https://unpkg.com/@ag-grid-enterprise/clipboard@27.2.1/dist/clipboard.cjs.min.js",
+                "@ag-grid-enterprise/column-tool-panel": "https://unpkg.com/@ag-grid-enterprise/column-tool-panel@27.2.1/dist/column-tool-panel.cjs.min.js",
+                "@ag-grid-enterprise/core": "https://unpkg.com/@ag-grid-enterprise/core@27.2.1/dist/core.cjs.min.js",
+                "@ag-grid-enterprise/excel-export": "https://unpkg.com/@ag-grid-enterprise/excel-export@27.2.1/dist/excel-export.cjs.min.js",
+                "@ag-grid-enterprise/filter-tool-panel": "https://unpkg.com/@ag-grid-enterprise/filter-tool-panel@27.2.1/dist/filter-tool-panel.cjs.min.js",
+                "@ag-grid-enterprise/master-detail": "https://unpkg.com/@ag-grid-enterprise/master-detail@27.2.1/dist/master-detail.cjs.min.js",
+                "@ag-grid-enterprise/menu": "https://unpkg.com/@ag-grid-enterprise/menu@27.2.1/dist/menu.cjs.min.js",
+                "@ag-grid-enterprise/multi-filter": "https://unpkg.com/@ag-grid-enterprise/multi-filter@27.2.1/dist/multi-filter.cjs.min.js",
+                "@ag-grid-enterprise/range-selection": "https://unpkg.com/@ag-grid-enterprise/range-selection@27.2.1/dist/range-selection.cjs.min.js",
+                "@ag-grid-enterprise/rich-select": "https://unpkg.com/@ag-grid-enterprise/rich-select@27.2.1/dist/rich-select.cjs.min.js",
+                "@ag-grid-enterprise/row-grouping": "https://unpkg.com/@ag-grid-enterprise/row-grouping@27.2.1/dist/row-grouping.cjs.min.js",
+                "@ag-grid-enterprise/server-side-row-model": "https://unpkg.com/@ag-grid-enterprise/server-side-row-model@27.2.1/dist/server-side-row-model.cjs.min.js",
+                "@ag-grid-enterprise/set-filter": "https://unpkg.com/@ag-grid-enterprise/set-filter@27.2.1/dist/set-filter.cjs.min.js",
+                "@ag-grid-community/side-bar": "https://unpkg.com/@ag-grid-enterprise/1side-bar@27.2.1/dist/side-bar.cjs.min.js",
+                "@ag-grid-enterprise/sparklines": "https://unpkg.com/@ag-grid-enterprise/sparklines@27.2.1/dist/sparklines.cjs.min.js",
+                "@ag-grid-enterprise/status-bar": "https://unpkg.com/@ag-grid-enterprise/status-bar@27.2.1/dist/status-bar.cjs.min.js",
+                "@ag-grid-enterprise/viewport-row-model": "https://unpkg.com/@ag-grid-enterprise/viewport-row-model@27.2.1/dist/viewport-row-model.cjs.min.js"
+            };
+        </script>
+		<script src="https://unpkg.com/systemjs@0.19.47/dist/system.js">
+		</script>
+		<script src="systemjs.config.js">
+		</script>
+		<script>System.import('main.ts').catch(function(err) { console.error(err); });</script>
+
+</body>
+</html>
