@@ -15,18 +15,18 @@
     <header>
       <!--nav -->
       <div class="navbar navbar-expand-xl fixed-top navbar-light bg-blue shadow-sm">
-        <a href="home" class="navbar-brand d-flex align-items-center">
-          <img src="/assets/img/logo_tps.svg" alt="TPS's Logo">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="assets/img/logo_tps.svg" alt="TPS's Logo">
         </a>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-              <a class="nav-link" id="Home" href="home">
+              <a [routerLink]="['/home']" routerLinkActive="routerLinkActive" class="nav-link" id="Home" >
                 <img src="/assets/img/house-bar.png" alt="Bootstrap" width="24" height="24">
                 Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="Agreements" href="agreements">
+              <a [routerLink]="['/agreements']" routerLinkActive="routerLinkActive" class="nav-link" id="Agreements">
                 <img src="/assets/img/supermarket-bar.png" alt="Bootstrap" width="24" height="24">
                 Agreements</a>
             </li>
