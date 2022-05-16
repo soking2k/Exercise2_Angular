@@ -13,55 +13,57 @@
 <body>
   <div class="body">
     <header>
-      <!--nav -->
-      <div class="navbar navbar-expand-xl fixed-top navbar-light bg-blue shadow-sm">
-        <a href="#" class="navbar-brand d-flex align-items-center">
-          <img src="assets/img/logo_tps.svg" alt="TPS's Logo">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-              <a [routerLink]="['/home']" routerLinkActive="routerLinkActive" class="nav-link" id="Home" >
-                <img src="/assets/img/house-bar.png" alt="Bootstrap" width="24" height="24">
-                Home</a>
-            </li>
-            <li class="nav-item">
-              <a [routerLink]="['/agreements']" routerLinkActive="routerLinkActive" class="nav-link" id="Agreements">
-                <img src="/assets/img/supermarket-bar.png" alt="Bootstrap" width="24" height="24">
-                Agreements</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav mr-auto1">
-            <li class="nav-item1">
-             <a class="nav-link" id="goodafternoon" href="#">
-              <b>Pandult</b> <p>Good Afternoon, User</p></a>
-            </li>
-          </ul>
-          <img src="/assets/img/setting.png" alt="Bootstrap" width="18" height="18">
-        </div>
-      </div>
+      <!--nav Chỗ này chắc phải tạo thêm 1 component để load Nav cho mobile-->
+           <div class="navbar navbar-expand-xl fixed-top navbar-light bg-blue shadow-sm">
+            <a [routerLink]="['/home']" routerLinkActive="routerLinkActive" class="navbar-brand d-flex align-items-center">
+              <img src="assets/img/logo_tps.svg" alt="TPS's Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarHeader">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                  <a [routerLink]="['/home']" routerLinkActive="routerLinkActive" class="nav-link" id="Home" >
+                    <img src="assets/img/house-bar.png" alt="Bootstrap" width="24" height="24">
+                    Home</a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/agreements']" routerLinkActive="routerLinkActive" class="nav-link" id="Agreements">
+                    <img src="assets/img/supermarket-bar.png" alt="Bootstrap" width="24" height="24">
+                    Agreements</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav mr-auto1">
+                <li class="nav-item1">
+                 <a class="nav-link" id="goodafternoon" >
+                  <b>Pandult</b> <p>Good Afternoon, User</p></a>
+                </li>
+              </ul>
+              <img src="assets/img/setting.png" alt="Bootstrap" width="18" height="18">
+            </div>
+          </div>
     </header>
     <!--Body-->
     <div class="container_home d-flex align-content-start flex-wrap">
       <div class="row d-flex flex-wrap">
         <div class="paragraph">
           <h2 id="tittle_para">Welcome to Celerity Enterprises!</h2>
-          <p class="para_para">We provide a unified platform for Agreements recociliation, communication, and repoting
-            between parties across the supplier and distribution network</p>
+          <p class="para_para">We provide a unified platform for agreement reconciliation, communication, and reporting between parties across the supplier and distribution network</p>
         </div>
         <div class="col-sm-8">
           <div class="row">
             <!--Item 1-->
             <div class="item_hashtag d-flex flex-wrap">
               <div class="col-md-3">
-                <img src="/assets/img/tag.png" alt="Bootstrap" width="150px" height="150px">
+                <img src="assets/img/tag.png" alt="Bootstrap" width="150px" height="150px">
               </div>
               <div class="col-md-7">
                 <div class="decscrip">
                   <h2 class="title_tag">Agreements</h2>
                   <p class="para_tag">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus libero omnis voluptatibus
-                    provident numquam similique ex, nam impedit unde quam?
+                    Review the status of special pricing agreements in place with your customers. View, modify, or publish agreements details to ensure contact rules are in place for accounting accuracy
                   </p>
                 </div>
               </div>
@@ -72,14 +74,13 @@
             <!--Item 1-->
             <div class="item_hashtag d-flex align-content-start flex-wrap">
               <div class="col-md-3">
-                <img src="/assets/img/claim.png" alt="Bootstrap" width="150px" height="150px">
+                <img src="assets/img/claim.png" alt="Bootstrap" width="150px" height="150px">
               </div>
               <div class="col-md-7">
                 <div class="decscrip">
-                  <h2 class="title_tag">Agreements</h2>
+                  <h2 class="title_tag">Claims</h2>
                   <p class="para_tag">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus libero omnis voluptatibus
-                    provident numquam similique ex, nam impedit unde quam?
+                    Ensure claims and submittals are ready to be sent your trading partners. Check the status of claim submissions, track workflow, and have complete transparency through the submission process.
                   </p>
                 </div>
               </div>
@@ -90,14 +91,15 @@
             <!--Item 1-->
             <div class="item_hashtag d-flex align-content-start flex-wrap">
               <div class="col-md-3">
-                <img src="/assets/img/bar-chart.png" alt="Bootstrap" width="150px" height="150px">
+                <img src="assets/img/bar-chart.png" alt="Bootstrap" width="150px" height="150px">
               </div>
               <div class="col-md-7">
                 <div class="decscrip">
-                  <h2 class="title_tag">Agreements</h2>
+                  <h2 class="title_tag">Reports</h2>
                   <p class="para_tag">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus libero omnis voluptatibus
-                    provident numquam similique ex, nam impedit unde quam?
+                    Get updateed agreement and claim data in real time, providing business intelligence for up-to-date understanding of your business. Create key performance reports, create scheduled reporting, and enjoy self-service analytics created for your unique business goals.
+
+
                   </p>
                 </div>
               </div>

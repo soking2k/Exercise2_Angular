@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ColDef, GridApi, Color, GridReadyEvent, IColumnToolPanel, SideBarDef,ICellRenderer,ICellRendererParams} from 'ag-grid-community';
 import 'ag-grid-enterprise';
-var count=0;
 
 
 class DeltaIndicator implements ICellRenderer {
@@ -11,21 +10,23 @@ class DeltaIndicator implements ICellRenderer {
     const element = document.createElement('span');
     const imageElement = document.createElement('img');
     const imageElemennewt = document.createElement('p');
+    var count=0;
+
 
     if (params.value === 'Invalid') {
-      count++;
+      count=Math.floor(Math.random() * 3) + 1;
       imageElemennewt.innerHTML =
       'Invalid <span style="color:#fff0f5;"><span style="background-color:#d9524e;;padding:4px;">'+count+'</span></span>';
       this.eGui = imageElemennewt;
     }  else if (params.value === 'Published') {
       imageElement.src =
-        '/assets/img/tick.png';
+        'assets/img/tick.png';
         element.appendChild(document.createTextNode(params.value + " "));
         element.appendChild(imageElement);
         this.eGui = element;
     } else {
       imageElement.src =
-        '/assets/img/peding.png';
+        'assets/img/peding.png';
         element.appendChild(document.createTextNode(params.value + " "));
         element.appendChild(imageElement);
         this.eGui = element;
@@ -46,7 +47,7 @@ class DeltaIndicator implements ICellRenderer {
 
   template: `
     <ag-grid-angular
-      style="width: 100%; height: 100%;"
+      style="width: 100%; height: 80%;"
       class="ag-theme-alpine"
       [columnDefs]="columnDefs"
       [defaultColDef]="defaultColDef"
@@ -64,9 +65,8 @@ export class AgreementsComponent {
 
 
   public columnDefs: ColDef[] = [
-    { field: 'Status' ,
+    { field: 'Status' , maxWidth: 130, minWidth: 130,
     filter: 'agTextColumnFilter',
-    minWidth: 200,
     cellRenderer: DeltaIndicator,
 
     cellStyle: params => {
@@ -83,24 +83,26 @@ export class AgreementsComponent {
       return null;
     },
   },
-  { field: 'Quote Number' },
+  { field: 'Quote Number', maxWidth: 160
+},
+
   {
-    field: 'Agreement Name',
-    minWidth: 200,
-    cellStyle: { color: 'rgb(15 183 188)', 'FontSize': '96px', 'font-size': '18px' }
+    field: 'Agreement Name', maxWidth: 190,
+
+    cellStyle: { color: 'rgb(15 183 188)', 'FontSize': '96px', 'font-size': '15px' }
 
   },
-  { field: 'Agreement Type', minWidth: 200 },
-  { field: 'Distributor Name', minWidth: 200 },
-  { field: 'Effective Date', type: ['dateColumn', 'nonEditableColumn'], width: 220 },
-  { field: 'Expiration Date', type: ['dateColumn', 'nonEditableColumn'], width: 220 },
-  { field: 'Created Date', type: ['dateColumn', 'nonEditableColumn'], width: 220 },
-  { field: 'Days Until Expiration', minWidth: 200 },
+  { field: 'Agreement Type', maxWidth: 180 },
+  { field: 'Distributor Name', maxWidth: 180 },
+  { field: 'Effective Date', type: ['dateColumn', 'nonEditableColumn'], maxWidth: 160 },
+  { field: 'Expiration Date', type: ['dateColumn', 'nonEditableColumn'], maxWidth: 160 },
+  { field: 'Created Date', type: ['dateColumn', 'nonEditableColumn'], maxWidth: 160 },
+  { field: 'Days Until Expiration', maxWidth: 190, minWidth: 160 },
   ];
 
 
 
-  public sideBar: SideBarDef | string | string[] | boolean | null = {
+  public sideBar: SideBarDef = {
     toolPanels: [
       {
         id: 'columns',
@@ -118,9 +120,14 @@ export class AgreementsComponent {
   };
   public defaultColDef: ColDef = {
     // set the default column width
-    width: 150,
+ //  flex:1,
+    flex: 1,
+    minWidth: 120,
+
     // make every column editable
     editable: true,
+
+
     // make every column use 'text' filter by default
     filter: 'agTextColumnFilter',
     // enable floating filters by default
@@ -174,7 +181,7 @@ export class AgreementsComponent {
     this.gridApi = params.api;
 
     this.http
-      .get('/assets/data/data.json')
+      .get('assets/data/data.json')
       .subscribe((data) => params.api.setRowData(data));
   }
 }
