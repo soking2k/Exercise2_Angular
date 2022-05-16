@@ -1,8 +1,23 @@
 
 @import 'ag-grid-community/dist/styles/ag-grid.css';
 @import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+@import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+
 .ag-header-cell-label {
-  justify-content: center;
   color: #4075a2;
 
+}
+.ag-body-viewport-wrapper.ag-layout-normal {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(255,255,255,.5);
 }

@@ -7,12 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AgreementsComponent } from './agreements/agreements.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AgreementsComponent
+    AgreementsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { AgGridModule } from 'ag-grid-angular';
     AgGridModule.withComponents([]),
 
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

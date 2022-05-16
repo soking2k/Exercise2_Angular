@@ -1,3 +1,5 @@
+$breadcrumb-divider: quote(">");
+
 /* Nav Bar*/
 header .navbar .navbar-brand>img {
   height: 48px;
@@ -75,5 +77,11 @@ body {
 
 }
 
+.blankcategory .bc-icons .breadcrumb-item + .breadcrumb-item::before {
+  content: none;
+}
 
+.blankcategory .bc-icons .breadcrumb-item.active {
+  color: #eeeeee;
+}
 
