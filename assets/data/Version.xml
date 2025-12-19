@@ -1,0 +1,15 @@
+﻿<Config URL="http://client-jx1m.resskiemthemobile.com/">
+  <CdnUrl Url="http://client-jx1m.resskiemthemobile.com/" />
+  <Application VerText="Vo Kiem" VerCode="25"/>
+  <Resource VerText="Vo Kiem" VerCode="200" />
+  <Store AppsIosUrl="https://testflight.apple.com/join/hf7xI4q6" AppsAndroidUrl="https://cdn.jx1m.net/jx1mobile.apk" Msg="Đã có phiên bản mới. Vui lòng tải về và cài đè lên phiên bản hiện tại để có được trải nghiệm tốt nhất." />
+  <UpdateInfo 
+  PushVoiceUrl="http://160.22.160.118:881/ChatVoiceService.aspx" 
+  GetVoiceUrl="http://160.22.160.118:881/GetVoiceChat.aspx" 
+  ServerListUrl="http://160.22.160.118:881/GetServerListTest.aspx" 
+  ServerListUrlBackUp="http://160.22.160.118:881/GetServerListTest.aspx" 
+  VerifyAccountSDK="http://160.22.160.118:881/VerifyAccount.aspx" 
+  LoginAccountSDK="http://160.22.160.118:881/LoginSDK.aspx" 
+  RegisterAccountSDK="http://160.22.160.118:881/RegisterSDK.aspx" 
+  FileUpdateUrl="UpdateList.xml" />
+</Config>
